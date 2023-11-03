@@ -1,0 +1,38 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/productdb
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    org.springframework: info
+    org.hibernate: info
+
+# ----------
+# Parameters
+# ----------
+environment: local
+
+application.id: backend-test
+
+## list properties
+categories.types: zone001,zone002,zone003
+#=================
+
+# AWS Parameter Store
+application:
+  title: Local App Title
+#=================
