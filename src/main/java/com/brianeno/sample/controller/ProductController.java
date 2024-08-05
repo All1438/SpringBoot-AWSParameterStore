@@ -13,13 +13,13 @@ import jakarta.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-    @Value(value = "${url}")
+    @Value(value = "${toto.url}")
     private String url;
 
-    @Value(value = "${user}")
+    @Value(value = "${toto.user}")
     private String user;
 
-    @Value(value = "${password}")
+    @Value(value = "${toto.password}")
     private String password;
 
 

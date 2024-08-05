@@ -13,10 +13,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class DemoApplication implements CommandLineRunner {
 
-	@Value(value = "${url}")
+	@Value(value = "${toto.url}")
 	private String applicationId;
 
-	@Value(value = "${user}")
+	@Value(value = "${toto.user}")
 	private String applicationTitle;
 
 	public static void main(String[] args) {

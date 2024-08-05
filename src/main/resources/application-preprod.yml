@@ -10,6 +10,10 @@ logging:
         console: '%d{dd-MM-yyyy HH:mm:ss.SSS} %-5level [${spring.application.name}] - [${spring.profiles.active}] - %msg%n'
         file: '%d{dd-MM-yyyy HH:mm:ss.SSS} %-5level [${spring.application.name}] - [${spring.profiles.active}] - %msg%n'
 
+toto:
+  url: ${url}
+  user: ${user}
+  password: ${password}
 #-----------
 # Properties
 #-----------
