@@ -1,7 +1,7 @@
 aws:
     paramstore:
-        name: backend
-        prefix: /brianeno
+        name: db
+        prefix: /settings
         enabled: true
         defaultContext: application
         profileSeparator: _

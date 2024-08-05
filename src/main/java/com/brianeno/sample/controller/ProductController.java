@@ -13,31 +13,23 @@ import jakarta.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-    @Value(value = "${application.id}")
-    private String applicationId;
+    @Value(value = "${url}")
+    private String url;
 
-    @Value(value = "${environment}")
-    private String environment;
+    @Value(value = "${user}")
+    private String user;
 
-    @Value(value = "${categories.types:#{null}}")
-    private String[] categoryTypes;
-
-    @Value("${spring.profiles.active:none}")
-    private String currentActiveEnv;
-
-    @Value(value = "${application.title:#{null}}")
-    private String applicationTitle;
+    @Value(value = "${password}")
+    private String password;
 
 
     @RequestMapping(value = "/props", method = RequestMethod.GET)
     public Map<String, Object> getProperties(HttpServletRequest request) {
 
         final Map<String, Object> map = new HashMap<>();
-        map.put("currentProfile", currentActiveEnv);
-        map.put("applicationId", applicationId);
-        map.put("environment", environment);
-        map.put("types", categoryTypes);
-        map.put("title", applicationTitle);
+        map.put("url", url);
+        map.put("user", user);
+        map.put("password", password);
         return map;
     }
 
