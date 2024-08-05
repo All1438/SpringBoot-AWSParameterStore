@@ -2,23 +2,13 @@ server:
   port: 8000
 
 spring:
-  datasource:
-    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerPostgreSQLDriver
-    url: jdbc-secretsmanager:postgresql://productdb-aws.czkc3wo2hqib.us-east-1.rds.amazonaws.com:5432/postgres
-    username: dev/backend_dev
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    application:
+        name: test
 
 logging:
-  level:
-    org.springframework: info
-    org.hibernate: info
+    pattern:
+        console: '%d{dd-MM-yyyy HH:mm:ss.SSS} %-5level [${spring.application.name}] - [${spring.profiles.active}] - %msg%n'
+        file: '%d{dd-MM-yyyy HH:mm:ss.SSS} %-5level [${spring.application.name}] - [${spring.profiles.active}] - %msg%n'
 
 #-----------
 # Properties

@@ -1,13 +1,4 @@
 aws:
-    secretsmanager:
-        name: backend
-        prefix: dev
-        enabled: true
-        defaultContext: application
-        profileSeparator: _
-        failFast: false
-        region: us-east-1
-
     paramstore:
         name: backend
         prefix: /brianeno
@@ -15,5 +6,5 @@ aws:
         defaultContext: application
         profileSeparator: _
         failFast: true
-        region: us-east-1
+        region: eu-west-1
 
